@@ -30,7 +30,6 @@ public class ModesManager : MonoBehaviour
             {
                 component.enabled = true;
             }
-            //camera to captain
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -44,7 +43,6 @@ public class ModesManager : MonoBehaviour
             {
                 component.enabled = false;
             }
-            //camera to gunner
         }
     }
 }

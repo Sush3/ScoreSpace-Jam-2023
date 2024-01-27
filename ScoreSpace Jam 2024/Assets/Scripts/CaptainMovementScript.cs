@@ -60,4 +60,8 @@ public class CaptainMovementScript : MonoBehaviour
             rb.angularDrag = 0.05f;
         }
     }
+    private void OnDisable()
+    {       
+         thrusterVfx.SetActive(false);
+    }
 }
