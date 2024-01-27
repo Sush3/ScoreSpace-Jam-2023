@@ -31,6 +31,9 @@ public class CaptainMovementScript : MonoBehaviour
         {
             thrusterVfx.SetActive(false);
         }
+
+        Vector2 mouseDelta = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
+        rb.AddRelativeTorque(mouseDelta * pointSpeed*Time.deltaTime);
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -56,10 +59,5 @@ public class CaptainMovementScript : MonoBehaviour
         {
             rb.angularDrag = 0.05f;
         }
-
-        //
-
-        Vector2 mouseDelta = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
-        rb.AddRelativeTorque(mouseDelta * pointSpeed);
     }
 }
