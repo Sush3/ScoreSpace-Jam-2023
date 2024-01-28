@@ -14,6 +14,14 @@ public abstract class Enemy : MonoBehaviour
         DieEffect();
         Destroy(gameObject);
     }
+    public void Hit(float dmg)
+    {
+        health -= dmg;
+        if (health<=0)
+        {
+            Die();
+        }
+    }
     protected virtual void DieEffect()
     {
 

@@ -26,7 +26,6 @@ public class RocketHitScript : Enemy
         }
         else if (other.CompareTag("Terrain"))
         {
-            Debug.Log("AAAAA");
             Die();
         }
     }

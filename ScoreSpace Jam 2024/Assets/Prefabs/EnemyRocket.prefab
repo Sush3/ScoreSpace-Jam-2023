@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1446422962582952272}
   m_Layer: 0
   m_Name: EnemyRocket
-  m_TagString: Rocket
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebbef212d361f14983efd385d87e810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  acceleration: 10
+  speed: 2
+  acceleration: 3
   turnSpeed: 2
   deviationAmplitude: 20
   deviationFrequency: 5
@@ -86,7 +86,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.3
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

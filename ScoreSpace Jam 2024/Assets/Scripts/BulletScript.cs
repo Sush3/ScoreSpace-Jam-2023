@@ -8,6 +8,10 @@ public class BulletScript : MonoBehaviour
     float bulletSpeed;
     [SerializeField]
     float lifetime;
+    [SerializeField]
+    GameObject explosion;
+    [SerializeField]
+    float splashRadius;
     Rigidbody rb;
     Vector3 velocity;
     float timer;
@@ -24,8 +28,34 @@ public class BulletScript : MonoBehaviour
         rb.velocity = velocity;
         if (timer<Time.time)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Debug.Log(other.name);
+            other.GetComponent<Enemy>().Hit(20);
+            Die();
+        }
+        else if (other.CompareTag("Terrain"))
+        {
+            foreach (var collider in Physics.OverlapSphere(transform.position,splashRadius))
+            {
+                if (collider.CompareTag("Enemy"))
+                {
+                    other.GetComponent<Enemy>().Hit(20);
+                }
+            }
+            Die();
+        }
+    }
+    void Die()
+    {
+        
+        Instantiate(explosion, transform.position-(rb.velocity*Time.deltaTime*2), transform.rotation);
+        Destroy(gameObject);
     }
     public void AddShipVelocity(Vector3 vel)
     {
