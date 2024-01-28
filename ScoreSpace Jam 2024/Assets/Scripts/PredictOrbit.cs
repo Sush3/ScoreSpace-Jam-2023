@@ -8,38 +8,67 @@ public class PredictOrbit : MonoBehaviour
     Rigidbody rb;
     [SerializeField]
     int stepCount;
-    LineRenderer lr;
+    [SerializeField]
+    int ghostFrequency;
+    [SerializeField]
+    GameObject orbitPredictionGhostPrefab;
+    [SerializeField]
+    Transform collisionPrediction;
+     
+    List<GameObject> orbitPredictionList = new List<GameObject>();
+    int frameCounter;
     // Start is called before the first frame update
     void Start()
     {
         gravityStrength=GetComponent<GravitateScript>().GetStrength();
         rb = GetComponent<Rigidbody>();
-        lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3[] prediction = new Vector3[stepCount];
         var currentPos = rb.position;
         var prevPos = currentPos;
         var currentVelocity = rb.velocity;
-        var planetCords = gameObject.transform.position;
-
+        int ghostsCount = 0;
+        collisionPrediction.transform.position = Vector3.zero;
         for (int i = 0; i < stepCount; i++)
         {
-            var distance = -currentPos;
-
-            var forceMag = gravityStrength / distance.sqrMagnitude;
-            var forces = distance.normalized * forceMag;
+            var forceMag = gravityStrength / (-currentPos).sqrMagnitude;
+            var forces = (-currentPos).normalized * forceMag;
             currentVelocity += forces * Time.fixedDeltaTime;
 
             currentPos += currentVelocity * Time.fixedDeltaTime;
             prevPos = currentPos;
             prediction[i] = currentPos;
+            if ((i+ frameCounter) % ghostFrequency == 0)
+            {
+                if (orbitPredictionList.Count-1<ghostsCount)
+                {
+                    orbitPredictionList.Add(Instantiate(orbitPredictionGhostPrefab, currentPos, Quaternion.LookRotation(currentVelocity)));
+                }
+                else
+                {
+                    orbitPredictionList[ghostsCount].transform.position = currentPos;
+                    orbitPredictionList[ghostsCount].transform.rotation = Quaternion.LookRotation(currentVelocity);
+                }
+                ghostsCount++;
+            }
+            if (currentPos.sqrMagnitude<=400)
+            {
+                // asteroid closest point to bounds
+                collisionPrediction.transform.position = currentPos;
+                return;
+            }
         }
-        lr.positionCount = stepCount;
-        lr.SetPositions(prediction);
 
+        if (orbitPredictionList.Count>ghostsCount)
+        {
+            Destroy(orbitPredictionList[orbitPredictionList.Count - 1]);
+            orbitPredictionList.RemoveAt(orbitPredictionList.Count - 1);
+        }
+
+        frameCounter++;
     }
 }
