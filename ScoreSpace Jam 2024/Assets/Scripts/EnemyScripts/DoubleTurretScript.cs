@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoubleTurretScript : MonoBehaviour
+public class DoubleTurretScript : Turret
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Transform[] firePoints;
+    protected override void Fire()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (var firePoint in firePoints)
+        {
+            SpawnRocket(firePoint);
+        }
     }
 }

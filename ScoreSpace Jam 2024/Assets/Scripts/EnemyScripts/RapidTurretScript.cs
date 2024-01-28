@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RapidTurretScript : MonoBehaviour
+public class RapidTurretScript : Turret
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Transform[] firePoints;
+    int nextBarrel;
+    protected override void Fire()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SpawnRocket(firePoints[nextBarrel]);
+        nextBarrel++;
+        nextBarrel %= firePoints.Length;
     }
 }

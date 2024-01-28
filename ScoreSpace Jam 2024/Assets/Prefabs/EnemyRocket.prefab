@@ -49,7 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   acceleration: 10
-  turnSpeed: 0.3
+  turnSpeed: 2
+  deviationAmplitude: 20
+  deviationFrequency: 5
 --- !u!114 &407281103576202854
 MonoBehaviour:
   m_ObjectHideFlags: 0
