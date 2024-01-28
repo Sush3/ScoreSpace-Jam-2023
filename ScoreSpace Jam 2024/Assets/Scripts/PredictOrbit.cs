@@ -14,14 +14,18 @@ public class PredictOrbit : MonoBehaviour
     GameObject orbitPredictionGhostPrefab;
     [SerializeField]
     Transform collisionPrediction;
-     
+
     List<GameObject> orbitPredictionList = new List<GameObject>();
     int frameCounter;
+    Collider asteroidCollider;
+    float shipColliderRadius;
     // Start is called before the first frame update
     void Start()
     {
         gravityStrength=GetComponent<GravitateScript>().GetStrength();
         rb = GetComponent<Rigidbody>();
+        asteroidCollider = GameManager.Instance.GetAsteroidCollider();
+        shipColliderRadius = GetComponent<SphereCollider>().radius;
     }
 
     // Update is called once per frame
@@ -55,11 +59,10 @@ public class PredictOrbit : MonoBehaviour
                 }
                 ghostsCount++;
             }
-            if (currentPos.sqrMagnitude<=400)
+            if (Vector3.Distance(asteroidCollider.ClosestPoint(currentPos),currentPos) <= shipColliderRadius)
             {
-                // asteroid closest point to bounds
-                collisionPrediction.transform.position = currentPos;
-                return;
+                collisionPrediction.transform.position = asteroidCollider.ClosestPoint(currentPos);
+                break;
             }
         }
 
