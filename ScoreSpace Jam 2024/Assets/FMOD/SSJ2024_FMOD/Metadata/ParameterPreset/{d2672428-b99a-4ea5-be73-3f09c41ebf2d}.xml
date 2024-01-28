@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d2672428-b99a-4ea5-be73-3f09c41ebf2d}">
+		<property name="name">
+			<value>propeller_on</value>
+		</property>
+		<relationship name="folder">
+			<destination>{e092514a-af68-4cc6-9e50-c8eae7db0b3c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{73e82024-e8ba-4933-a684-95153d143551}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{73e82024-e8ba-4933-a684-95153d143551}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
