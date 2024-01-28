@@ -1,5 +1,57 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9132235777459034521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Turret_Hinge
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Turret_Hinge
+  Guid:
+    Data1: -801101625
+    Data2: 1213724301
+    Data3: -1947038559
+    Data4: 2131087564
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7787751742005222852}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5679
+--- !u!114 &-7787751742005222852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SFX_Turret_Hinge/turret_hinge_speed
+  m_EditorClassIdentifier: 
+  Name: turret_hinge_speed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1144771402
+    data2: 3705038536
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2884860284054968966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +79,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 125
+--- !u!114 &-1120043105106284606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/turret_hinge_speed
+  m_EditorClassIdentifier: 
+  Name: turret_hinge_speed
+  StudioPath: parameter:/turret_hinge_speed
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1144771402
+    data2: 3705038536
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,12 +120,16 @@ MonoBehaviour:
   - {fileID: 1485424192265276456}
   EditorEvents:
   - {fileID: -2884860284054968966}
-  EditorParameters: []
+  - {fileID: 4770109900155192560}
+  - {fileID: -9132235777459034521}
+  EditorParameters:
+  - {fileID: 8089984242305812612}
+  - {fileID: -1120043105106284606}
   MasterBanks:
   - {fileID: 1485424192265276456}
   StringsBanks:
   - {fileID: 1578912128464644909}
-  cacheTime: 638418120277796874
+  cacheTime: 638420674596295605
   cacheVersion: 131616
 --- !u!114 &1485424192265276456
 MonoBehaviour:
@@ -66,10 +146,10 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638418120277771851
+  lastModified: 638420674596290575
   FileSizes:
   - Name: Desktop
-    Value: 3072
+    Value: 160896
   Exists: 1
 --- !u!114 &1578912128464644909
 MonoBehaviour:
@@ -86,8 +166,59 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638418120277796874
+  lastModified: 638420674596295605
   FileSizes:
   - Name: Desktop
-    Value: 754
+    Value: 984
+  Exists: 1
+--- !u!114 &4770109900155192560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Propeller
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Propeller
+  Guid:
+    Data1: 905590885
+    Data2: 1238544888
+    Data3: -1501524330
+    Data4: -1798141016
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 2863
+--- !u!114 &8089984242305812612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/propeller_on
+  m_EditorClassIdentifier: 
+  Name: propeller_on
+  StudioPath: parameter:/propeller_on
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3536841763
+    data2: 4063150779
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1

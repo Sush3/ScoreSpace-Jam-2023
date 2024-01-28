@@ -15,6 +15,7 @@ public class CaptainMovementScript : MonoBehaviour
     [SerializeField]
     float angularDragStrength;
     Rigidbody rb;
+    public GameObject audioThruster;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +73,7 @@ public class CaptainMovementScript : MonoBehaviour
             foreach (var particleSystem in thrusterVfxArray)
             {
                 particleSystem.Play();
+                audioThruster.SetActive(true);
             }
         }
         else
@@ -79,6 +81,7 @@ public class CaptainMovementScript : MonoBehaviour
             foreach (var particleSystem in thrusterVfxArray)
             {
                 particleSystem.Stop();
+                audioThruster.SetActive(false);
             }
         }
     }
