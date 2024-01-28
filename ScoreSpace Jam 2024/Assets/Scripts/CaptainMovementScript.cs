@@ -5,7 +5,7 @@ using UnityEngine;
 public class CaptainMovementScript : MonoBehaviour
 {
     [SerializeField]
-    GameObject thrusterVfx;
+    ParticleSystem[] thrusterVfxArray;
     [SerializeField]
     float thrust;
     [SerializeField]
@@ -25,11 +25,11 @@ public class CaptainMovementScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            thrusterVfx.SetActive(true);
+            SetThrustersActive(true);
         }
         else if (Input.GetKeyUp(KeyCode.W))
         {
-            thrusterVfx.SetActive(false);
+            SetThrustersActive(false);
         }
 
         Vector2 mouseDelta = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
@@ -61,7 +61,25 @@ public class CaptainMovementScript : MonoBehaviour
         }
     }
     private void OnDisable()
-    {       
-         thrusterVfx.SetActive(false);
+    {
+
+        SetThrustersActive(false);
+    }
+    void SetThrustersActive(bool x)
+    {
+        if (x)
+        {
+            foreach (var particleSystem in thrusterVfxArray)
+            {
+                particleSystem.Play();
+            }
+        }
+        else
+        {
+            foreach (var particleSystem in thrusterVfxArray)
+            {
+                particleSystem.Stop();
+            }
+        }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RocketHitScript : Enemy
 {
+    [SerializeField]
+    GameObject explosionVFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,6 @@ public class RocketHitScript : Enemy
     }
     protected override void DieEffect()
     {
-        //boom vfx
+        Instantiate(explosionVFX, transform.position, transform.rotation);
     }
 }
