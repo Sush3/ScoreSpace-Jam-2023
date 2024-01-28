@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 146784850719908855}
   - component: {fileID: 8910295966904759337}
   - component: {fileID: 6328959182511961550}
+  - component: {fileID: -3327868940593486253}
   m_Layer: 0
   m_Name: pf_vfx-inf_psys_demo_oneshot_flashBang3
   m_TagString: Untagged
@@ -4701,6 +4702,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &-3327868940593486253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3675413546407706499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c11e2a54559e49bac8a7533219c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 5
 --- !u!1 &6423387299589801670
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public abstract class Turret : Enemy
     [SerializeField]
     GameObject rocketPrefab;
     [SerializeField]
+    GameObject destroyedPrefab;
+    [SerializeField]
     float fireRate;
     [SerializeField]
     float randomDelayMin;
@@ -32,5 +34,9 @@ public abstract class Turret : Enemy
     protected void SpawnRocket(Transform firePoint)
     {
         Instantiate(rocketPrefab, firePoint.position, firePoint.rotation); 
+    }
+    protected override void DieEffect()
+    {
+        Instantiate(destroyedPrefab, transform.position, transform.rotation);
     }
 }

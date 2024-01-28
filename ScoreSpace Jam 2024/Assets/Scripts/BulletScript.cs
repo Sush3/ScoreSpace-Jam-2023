@@ -5,9 +5,10 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     [SerializeField]
-    float bulletSpeed;
+    float bulletDamage;
     [SerializeField]
-    float lifetime;
+    float bulletSpeed;
+
     [SerializeField]
     GameObject explosion;
     [SerializeField]
@@ -19,24 +20,18 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        timer = Time.time + lifetime;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         rb.velocity = velocity;
-        if (timer<Time.time)
-        {
-            Destroy(gameObject);
-        }
     }
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log(other.name);
-            other.GetComponent<Enemy>().Hit(20);
+            other.GetComponent<Enemy>().Hit(bulletDamage);
             Die();
         }
         else if (other.CompareTag("Terrain"))
@@ -45,15 +40,14 @@ public class BulletScript : MonoBehaviour
             {
                 if (collider.CompareTag("Enemy"))
                 {
-                    other.GetComponent<Enemy>().Hit(20);
+                    other.GetComponent<Enemy>().Hit(bulletDamage);
                 }
             }
             Die();
         }
     }
     void Die()
-    {
-        
+    {      
         Instantiate(explosion, transform.position-(rb.velocity*Time.deltaTime*2), transform.rotation);
         Destroy(gameObject);
     }

@@ -4845,6 +4845,7 @@ GameObject:
   - component: {fileID: 716797920615220517}
   - component: {fileID: -6852303494514982325}
   - component: {fileID: 2698777495134343711}
+  - component: {fileID: 4598096103168136855}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -4881,11 +4882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3da66c97b8ebe545a9204e3fdbd0bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletDamage: 10
   bulletSpeed: 100
-  lifetime: 30
   explosion: {fileID: 3675413546407706499, guid: 4175da0a9b4e42942ae94f546a9fae65,
     type: 3}
-  splashRadius: 0
+  splashRadius: 4
 --- !u!114 &716797920615220517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,6 +4948,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4598096103168136855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8635072724890956952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c11e2a54559e49bac8a7533219c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 30
 --- !u!1001 &3185472221041013359
 PrefabInstance:
   m_ObjectHideFlags: 0

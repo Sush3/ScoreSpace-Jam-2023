@@ -15,10 +15,6 @@ public class GunnerChangeSideScript : MonoBehaviour
     Behaviour[] leftSideComponents;
     GunnerMovementScript gms;
 
-    private void Start()
-    {
-        gms=GetComponent<GunnerMovementScript>();
-    }
     // Update is called once per frame
     void Update()
     {
@@ -30,11 +26,22 @@ public class GunnerChangeSideScript : MonoBehaviour
     }
     void OnEnable()
     {
+        gms = GetComponent<GunnerMovementScript>();
         ActivateSide(isLookingRight);
+    }
+    private void OnDisable()
+    {
+        foreach (var component in rightSideComponents)
+        {
+            component.enabled = false;
+        }
+        foreach (var component in leftSideComponents)
+        {
+            component.enabled = false;
+        }
     }
     void ActivateSide(bool isRight)
     {
-        gms.SetIsLookingRight(isLookingRight);
         if (isRight)
         {
             virtualGunnerCameras[0].Priority = 4;
@@ -61,5 +68,7 @@ public class GunnerChangeSideScript : MonoBehaviour
                 component.enabled = true;
             }
         }
+        Debug.Log(gms);
+        gms.SetIsLookingRight(isLookingRight);
     }
 }

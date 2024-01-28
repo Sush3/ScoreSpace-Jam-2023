@@ -9,7 +9,7 @@ public class GunnerMovementScript : MonoBehaviour
     [SerializeField]
     float rollSpeed;
     Rigidbody rb;
-    bool isLookingRight;
+    bool isLookingRight=true;
     // Start is called before the first frame update
     void Start()
     {
