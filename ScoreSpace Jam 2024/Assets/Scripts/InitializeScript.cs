@@ -19,7 +19,7 @@ public class InitializeScript : MonoBehaviour
         {
             asteroids[i] = transform.GetChild(i).GetComponent<AsteroidScript>();
         }
-        Initialize(10);
+        Initialize(30);
     }
 
     // Update is called once per frame
@@ -34,10 +34,6 @@ public class InitializeScript : MonoBehaviour
         asteroids[rnd].Spawn(credits);
         asteroids[rnd].transform.rotation = Random.rotation;
         float scale=  Random.Range(randomScaleMin, randomScaleMax);
-        for (int i = 0; i < asteroids[rnd].transform.childCount; i++)
-        {
-            asteroids[rnd].transform.GetChild(i).localScale = Vector3.one * (1 / scale);
-        }
         asteroids[rnd].transform.localScale = Vector3.one * scale;
     }
 }

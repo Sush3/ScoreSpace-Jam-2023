@@ -6,7 +6,7 @@ public class AsteroidScript : MonoBehaviour
 {
     Spawnable[] spawnables;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         spawnables = new Spawnable[transform.childCount];
         for (int i = 0; i < spawnables.Length; i++)
