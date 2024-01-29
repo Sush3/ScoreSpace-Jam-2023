@@ -10,11 +10,10 @@ public abstract class Enemy : MonoBehaviour
     float health;
     void Awake() 
     {
-        Debug.Log("Enemy spawned");
     }
     public void Die()
     {
-        Debug.Log("Enemy died");
+        GameManager.Instance.AddPoints(points);
         DieEffect();
         Destroy(gameObject);
     }

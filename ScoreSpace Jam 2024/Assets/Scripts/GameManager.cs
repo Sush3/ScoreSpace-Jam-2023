@@ -33,7 +33,9 @@ public class GameManager : MonoBehaviour
             if (Instance!=null)
             {
                 upgrades = Instance.GetUpgrades();
-                playerPoints = GetPoints();
+                playerPoints += Instance.GetPoints();
+                scoreText.text = "Score: " + playerPoints.ToString();
+
                 Destroy(Instance.gameObject);
             }
             Instance = this;
@@ -76,13 +78,13 @@ public class GameManager : MonoBehaviour
     public void AddPoints(int points)
     {
         if (points == 0) { return; }
-        if (points> PlayerPrefs.GetInt(highscoreKey))
-        {
-            PlayerPrefs.SetInt(highscoreKey, points);
-            highscoreText.text = "Highscore: " + points;
-        }
         playerPoints += points;
         scoreText.text = "Score: " + playerPoints.ToString();
+        if (playerPoints > PlayerPrefs.GetInt(highscoreKey))
+        {
+            PlayerPrefs.SetInt(highscoreKey, playerPoints);
+            highscoreText.text = "Highscore: " + playerPoints.ToString();
+        }
     }
     public void AddUpgrade(int index)
     {
