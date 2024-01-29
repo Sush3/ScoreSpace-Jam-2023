@@ -7,6 +7,8 @@ using Cinemachine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    UpgradesHandler upgradesHandler;
+    [SerializeField]
     TMP_Text scoreText;
     [SerializeField]
     int credits;
@@ -38,7 +40,9 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag("Enemy").Length==0&&!won)
         {
+            upgradesHandler.UpgradesScreen();
             won = true;
+            
         }
     }
     public Collider GetAsteroidCollider()

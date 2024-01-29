@@ -2255,6 +2255,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02fe1b366ac5ff4884d980f1b75f70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1844119070}
+  - {fileID: 1464358760}
+  - {fileID: 527847044}
+  - {fileID: 369240252}
+  - {fileID: 1009528318}
+  placeholders:
+  - {fileID: 1891645127}
+  - {fileID: 490659993}
+  - {fileID: 2085023985}
 --- !u!1001 &309886874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15328,6 +15338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b3d3f46fc1a046a92722593254537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradesHandler: {fileID: 0}
   scoreText: {fileID: 983761844}
   credits: 10
   initializeScript: {fileID: 1161833068}
