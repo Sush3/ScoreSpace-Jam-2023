@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     Rigidbody player;
     int playerPoints;
     public static GameManager Instance { get; private set; }
+    int[] upgrades = new int[5];
     // Start is called before the first frame update
     void Awake()
     {
@@ -50,5 +51,9 @@ public class GameManager : MonoBehaviour
 
         playerPoints += points;
         scoreText.text = "Score: " + playerPoints.ToString();
+    }
+    public void AddUpgrade(int index)
+    {
+        upgrades[index]++;
     }
 }

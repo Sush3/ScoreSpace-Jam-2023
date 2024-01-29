@@ -8,9 +8,13 @@ public abstract class Enemy : MonoBehaviour
     protected int points;
     [SerializeField]
     float health;
+    void Awake() 
+    {
+        Debug.Log("Enemy spawned");
+    }
     public void Die()
     {
-        GameManager.Instance.AddPoints(points);
+        Debug.Log("Enemy died");
         DieEffect();
         Destroy(gameObject);
     }
