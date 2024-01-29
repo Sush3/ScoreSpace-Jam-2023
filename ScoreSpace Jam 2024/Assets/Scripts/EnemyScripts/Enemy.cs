@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField]
-    int points;
+    protected int points;
     [SerializeField]
     float health;
     public void Die()

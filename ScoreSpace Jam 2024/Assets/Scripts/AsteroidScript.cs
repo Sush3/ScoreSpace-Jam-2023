@@ -5,17 +5,17 @@ using UnityEngine;
 public class AsteroidScript : MonoBehaviour
 {
     Spawnable[] spawnables;
-    // Start is called before the first frame update
-    void Awake()
+    public void Spawn(int credits)
     {
+        if (credits==0)
+        {
+            return;
+        }
         spawnables = new Spawnable[transform.childCount];
         for (int i = 0; i < spawnables.Length; i++)
         {
             spawnables[i] = transform.GetChild(i).GetComponent<Spawnable>();
         }
-    }
-    public void Spawn(int credits)
-    {
         int safetyLimit = 10000;
         for (int i = 0; i < safetyLimit; i++)
         {

@@ -39,8 +39,7 @@ public class BulletScript : MonoBehaviour
             foreach (var collider in Physics.OverlapSphere(transform.position,splashRadius))
             {
                 if (collider.CompareTag("Enemy"))
-                {
-                    Debug.Log(collider.name);
+                {                    
                     collider.GetComponent<Enemy>().Hit(bulletDamage);
                 }
             }

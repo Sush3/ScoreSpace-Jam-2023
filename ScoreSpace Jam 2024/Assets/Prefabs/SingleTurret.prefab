@@ -53,8 +53,9 @@ MonoBehaviour:
     type: 3}
   destroyedPrefab: {fileID: 141070, guid: 805832771bf9f5f48bead8310975480e, type: 3}
   fireRate: 11
-  randomDelayMin: 1
-  randomDelayMax: 4
+  randomDelayMin: 13
+  randomDelayMax: 20
+  activateDistanceThreshold: 100
   firePoint: {fileID: 2417582741109162279}
 --- !u!135 &7445431228292477873
 SphereCollider:

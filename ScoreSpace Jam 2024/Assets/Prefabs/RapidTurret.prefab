@@ -1018,8 +1018,9 @@ MonoBehaviour:
     type: 3}
   destroyedPrefab: {fileID: 141070, guid: 805832771bf9f5f48bead8310975480e, type: 3}
   fireRate: 6
-  randomDelayMin: 3
-  randomDelayMax: 5
+  randomDelayMin: 13
+  randomDelayMax: 20
+  activateDistanceThreshold: 100
   firePoints:
   - {fileID: 8137573403742356755}
   - {fileID: 9066119278071812998}

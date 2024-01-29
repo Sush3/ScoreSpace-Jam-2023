@@ -4,26 +4,18 @@ using UnityEngine;
 
 public class InitializeScript : MonoBehaviour
 {
-    [SerializeField]
-    int credits;
     AsteroidScript[] asteroids;
     [SerializeField]
     float randomScaleMin;
     [SerializeField]
     float randomScaleMax;
-    // Start is called before the first frame update
-    void Start()
+    public Transform Initialize(int credits)
     {
         asteroids = new AsteroidScript[transform.childCount];
         for (int i = 0; i < asteroids.Length; i++)
         {
             asteroids[i] = transform.GetChild(i).GetComponent<AsteroidScript>();
         }
-        Initialize(credits);
-    }
-
-    public Transform Initialize(int credits)
-    {
         int rnd = Random.Range((int)0,(int)asteroids.Length);
         asteroids[rnd].gameObject.SetActive(true);
         asteroids[rnd].Spawn(credits);

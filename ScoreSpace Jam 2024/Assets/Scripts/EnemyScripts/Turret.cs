@@ -14,6 +14,8 @@ public abstract class Turret : Enemy
     float randomDelayMin;
     [SerializeField]
     float randomDelayMax;
+    [SerializeField]
+    float activateDistanceThreshold;
     float timer;
     void Start()
     {
@@ -23,7 +25,7 @@ public abstract class Turret : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (timer < Time.time)
+        if ( timer < Time.time )
         {
             Fire();
             timer = Time.time + fireRate;

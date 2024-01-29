@@ -14,6 +14,8 @@ public class RocketGuidanceScript : MonoBehaviour
     float deviationAmplitude;
     [SerializeField]
     float deviationFrequency;
+    [SerializeField]
+    float startDistThreshold;
 
     Rigidbody player;
     float timer;

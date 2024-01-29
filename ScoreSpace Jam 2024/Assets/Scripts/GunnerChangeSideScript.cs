@@ -68,7 +68,6 @@ public class GunnerChangeSideScript : MonoBehaviour
                 component.enabled = true;
             }
         }
-        Debug.Log(gms);
         gms.SetIsLookingRight(isLookingRight);
     }
 }

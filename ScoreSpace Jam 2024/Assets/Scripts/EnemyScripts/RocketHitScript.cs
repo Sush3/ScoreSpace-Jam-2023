@@ -26,6 +26,7 @@ public class RocketHitScript : Enemy
         }
         else if (other.CompareTag("Terrain"))
         {
+            points = 0;
             Die();
         }
     }
