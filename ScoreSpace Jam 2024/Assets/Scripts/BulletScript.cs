@@ -20,6 +20,7 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        bulletDamage += GameManager.Instance.GetUpgrades()[2]*10;
     }
 
     // Update is called once per frame

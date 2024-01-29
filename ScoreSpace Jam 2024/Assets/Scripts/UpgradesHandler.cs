@@ -5,6 +5,8 @@ using Cinemachine;
 public class UpgradesHandler : MonoBehaviour
 {
     [SerializeField]
+    CannonScript[] cannonScripts;
+    [SerializeField]
     CinemachineVirtualCamera virtualCamera;
     [SerializeField]
     GameObject[] buttons;
@@ -13,6 +15,7 @@ public class UpgradesHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpgradeShip();
     }
 
     // Update is called once per frame
@@ -38,6 +41,11 @@ public class UpgradesHandler : MonoBehaviour
                 }
             }
         }
+    }
+    public void UpgradeShip()
+    {
+        GetComponent<CaptainMovementScript>().AddToThrust(GameManager.Instance.GetUpgrades()[0]*2);
+
     }
     public void AddUpgrade(int index)
     {

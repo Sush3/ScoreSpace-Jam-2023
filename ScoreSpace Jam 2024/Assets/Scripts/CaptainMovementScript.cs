@@ -67,6 +67,10 @@ public class CaptainMovementScript : MonoBehaviour
 
         SetThrustersActive(false);
     }
+    public void AddToThrust(float x)
+    {
+        thrust += x;
+    }
     void SetThrustersActive(bool x)
     {
         if (x)

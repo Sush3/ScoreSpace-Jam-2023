@@ -27,7 +27,7 @@ public class CannonScript : MonoBehaviour
     float timer=0;
     float reloadTimer = 0;
     int ammo;
-
+    
     private FMOD.Studio.EventInstance instanceReload;
     void Start()
     {
@@ -62,5 +62,9 @@ public class CannonScript : MonoBehaviour
             ammo = maxAmmo;
             ammoText.text = ammo.ToString();
         }
+    }
+    public void AddRateOfFire(float x)
+    {
+        rateOfFire += x;
     }
 }

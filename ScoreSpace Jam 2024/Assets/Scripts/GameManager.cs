@@ -30,9 +30,11 @@ public class GameManager : MonoBehaviour
             if (Instance!=null)
             {
                 upgrades = Instance.GetUpgrades();
+                Destroy(Instance.gameObject);
             }
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log(upgrades);
         }
         asteroidCollider = initializeScript.Initialize(credits).GetComponent<Collider>();
     }
@@ -72,7 +74,7 @@ public class GameManager : MonoBehaviour
         upgrades[index]++;
         SceneManager.LoadScene(1);
     }
-    int[] GetUpgrades()
+    public int[] GetUpgrades()
     {
         return upgrades;
     }
