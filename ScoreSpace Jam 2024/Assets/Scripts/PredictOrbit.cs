@@ -74,4 +74,8 @@ public class PredictOrbit : MonoBehaviour
 
         frameCounter++;
     }
+    public void StopPrediction()
+    {
+        stepCount = 0;
+    }
 }

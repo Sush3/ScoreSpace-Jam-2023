@@ -40,15 +40,19 @@ public class BulletScript : MonoBehaviour
             {
                 if (collider.CompareTag("Enemy"))
                 {
-                    other.GetComponent<Enemy>().Hit(bulletDamage);
+                    Debug.Log(collider.name);
+                    collider.GetComponent<Enemy>().Hit(bulletDamage);
                 }
             }
             Die();
         }
     }
+    private void OnDestroy()
+    {
+        Instantiate(explosion, transform.position-(rb.velocity*Time.deltaTime*2), transform.rotation);
+    }
     void Die()
     {      
-        Instantiate(explosion, transform.position-(rb.velocity*Time.deltaTime*2), transform.rotation);
         Destroy(gameObject);
     }
     public void AddShipVelocity(Vector3 vel)

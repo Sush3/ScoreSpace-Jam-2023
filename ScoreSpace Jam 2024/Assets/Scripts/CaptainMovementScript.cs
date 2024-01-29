@@ -34,7 +34,6 @@ public class CaptainMovementScript : MonoBehaviour
             SetThrustersActive(false);
             audioThruster.SetActive(false);
         }
-
         Vector2 mouseDelta = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
         rb.AddRelativeTorque(mouseDelta * pointSpeed*Time.deltaTime);
     }

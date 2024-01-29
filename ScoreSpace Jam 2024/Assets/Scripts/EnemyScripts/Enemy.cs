@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     float health;
     public void Die()
     {
-        Debug.Log(transform.name + " died points: " + points);
+        GameManager.Instance.AddPoints(points);
         DieEffect();
         Destroy(gameObject);
     }

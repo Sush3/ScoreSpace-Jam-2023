@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Collider asteroidCollider;
     [SerializeField]
-    GameObject player;
+    Rigidbody player;
     public static GameManager Instance { get; private set; }
     // Start is called before the first frame update
     void Awake()
@@ -31,8 +31,12 @@ public class GameManager : MonoBehaviour
     {
         return asteroidCollider;
     }
-    public GameObject GetPlayer()
+    public Rigidbody GetPlayer()
     {
         return player;
+    }
+    public void AddPoints(int points)
+    {
+
     }
 }

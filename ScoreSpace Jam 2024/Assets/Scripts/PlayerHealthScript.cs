@@ -11,11 +11,13 @@ public class PlayerHealthScript : MonoBehaviour
     Transform horizontalLayoutGroup;
     [SerializeField]
     GameObject healthSegment;
+    PlayerDeathScript pds;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         UpdateInterface();
+        pds = GetComponent<PlayerDeathScript>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,10 @@ public class PlayerHealthScript : MonoBehaviour
     {
         health--;
         UpdateInterface();
+        if (health<=0)
+        {
+            pds.Die();
+        }
     }
     void UpdateInterface()
     {
