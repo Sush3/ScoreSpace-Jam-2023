@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     int playerPoints;
     public static GameManager Instance { get; private set; }
     int[] upgrades = new int[5];
+    bool won;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,9 +34,12 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length==0&&!won)
+        {
+            won = true;
+        }
     }
     public Collider GetAsteroidCollider()
     {

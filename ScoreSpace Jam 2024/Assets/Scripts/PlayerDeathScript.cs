@@ -49,5 +49,4 @@ public class PlayerDeathScript : MonoBehaviour
         isDead = true;
         GetComponent<PredictOrbit>().StopPrediction();
     }
-    
 }
