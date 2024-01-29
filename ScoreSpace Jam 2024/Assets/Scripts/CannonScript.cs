@@ -67,4 +67,8 @@ public class CannonScript : MonoBehaviour
     {
         rateOfFire += x;
     }
+    public void AddReloadTime(float x)
+    {
+        reloadTime += x;
+    }
 }

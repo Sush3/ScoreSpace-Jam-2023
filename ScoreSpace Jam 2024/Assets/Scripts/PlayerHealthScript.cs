@@ -34,6 +34,14 @@ public class PlayerHealthScript : MonoBehaviour
             pds.Die();
         }
     }
+    public void AddHealth(int h)
+    {
+        health++;
+        for (int i = 0; i < h; i++)
+        {
+            UpdateInterface();
+        }
+    }
     void UpdateInterface()
     {
         if (horizontalLayoutGroup.childCount>health)

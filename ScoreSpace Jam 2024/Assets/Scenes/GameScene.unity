@@ -2255,6 +2255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02fe1b366ac5ff4884d980f1b75f70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonScripts:
+  - {fileID: 919132149286205222}
+  - {fileID: 919132148521492449}
   virtualCamera: {fileID: 1864618623}
   buttons:
   - {fileID: 1844119070}
