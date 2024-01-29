@@ -54,7 +54,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3281
+  Length: 5875
 --- !u!114 &-7787751742005222852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,8 +131,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 784
+  MaxDistance: 70
+  Length: 2000
 --- !u!114 &-4273412019852211236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +252,6 @@ MonoBehaviour:
   - {fileID: -9132235777459034521}
   - {fileID: 8424743123584149253}
   - {fileID: 2740454787355567123}
-  - {fileID: 347744605606768991}
   - {fileID: -6589267981566851077}
   - {fileID: -5729615332232497304}
   - {fileID: -8703069230405522754}
@@ -266,35 +265,8 @@ MonoBehaviour:
   - {fileID: 1485424192265276456}
   StringsBanks:
   - {fileID: 1578912128464644909}
-  cacheTime: 638421049676837304
+  cacheTime: 638421475151679945
   cacheVersion: 131616
---- !u!114 &347744605606768991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ship/SFX_Rod_Fire
-  m_EditorClassIdentifier: 
-  Path: event:/Ship/SFX_Rod_Fire
-  Guid:
-    Data1: 1018669900
-    Data2: 1189993550
-    Data3: 223880598
-    Data4: -1468499405
-  Banks:
-  - {fileID: 1485424192265276456}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1485424192265276456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,10 +282,10 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638421049676822284
+  lastModified: 638421475151659911
   FileSizes:
   - Name: Desktop
-    Value: 3154368
+    Value: 2962336
   Exists: 1
 --- !u!114 &1578912128464644909
 MonoBehaviour:
@@ -330,10 +302,10 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638421049676837304
+  lastModified: 638421475151679945
   FileSizes:
   - Name: Desktop
-    Value: 1312
+    Value: 1274
   Exists: 1
 --- !u!114 &2494797809231228330
 MonoBehaviour:
@@ -355,13 +327,13 @@ MonoBehaviour:
     Data4: -253829369
   Banks:
   - {fileID: 1485424192265276456}
-  IsStream: 1
+  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 50
-  Length: 875
+  Length: 1500
 --- !u!114 &2740454787355567123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,4 +439,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 50
-  Length: 271
+  Length: 500
