@@ -2255,6 +2255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02fe1b366ac5ff4884d980f1b75f70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 1864618623}
   buttons:
   - {fileID: 1844119070}
   - {fileID: 1464358760}
@@ -2907,7 +2908,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 369240255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064716194}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddUpgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &369240255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4271,7 +4284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 527847047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064716194}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddUpgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &527847047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6977,7 +7002,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009528321}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064716194}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddUpgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009528321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11049,7 +11086,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1464358763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064716194}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddUpgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1464358763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14243,7 +14292,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1844119073}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064716194}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddUpgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1844119073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15338,9 +15399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b3d3f46fc1a046a92722593254537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradesHandler: {fileID: 0}
+  upgradesHandler: {fileID: 264140253}
   scoreText: {fileID: 983761844}
-  credits: 10
+  credits: 1
   initializeScript: {fileID: 1161833068}
   player: {fileID: 264140240}
 --- !u!4 &2064716195

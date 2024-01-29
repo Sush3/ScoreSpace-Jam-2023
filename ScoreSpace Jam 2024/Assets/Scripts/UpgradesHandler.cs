@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class UpgradesHandler : MonoBehaviour
 {
+    [SerializeField]
+    CinemachineVirtualCamera virtualCamera;
     [SerializeField]
     GameObject[] buttons;
     [SerializeField]
@@ -11,7 +13,6 @@ public class UpgradesHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpgradesScreen();
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class UpgradesHandler : MonoBehaviour
     }
     public void UpgradesScreen()
     {
+        virtualCamera.Priority = 10;
         int toActivate = 3;
         for (int i = 0; i < 10000; i++)
         {

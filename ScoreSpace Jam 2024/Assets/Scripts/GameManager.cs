@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,13 +25,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (Instance==null)
+        if (Instance!=this)
         {
+            if (Instance!=null)
+            {
+                upgrades = Instance.GetUpgrades();
+            }
             Instance = this;
-        }
-        else
-        {
-            Destroy(this);
+            DontDestroyOnLoad(gameObject);
         }
         asteroidCollider = initializeScript.Initialize(credits).GetComponent<Collider>();
     }
@@ -41,8 +43,7 @@ public class GameManager : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Enemy").Length==0&&!won)
         {
             upgradesHandler.UpgradesScreen();
-            won = true;
-            
+            won = true;         
         }
     }
     public Collider GetAsteroidCollider()
@@ -62,6 +63,17 @@ public class GameManager : MonoBehaviour
     }
     public void AddUpgrade(int index)
     {
+        //thrust
+        //rof
+        //dmg
+        //heal
+        //rel
+        Debug.Log("AAAAAAAA");
         upgrades[index]++;
+        SceneManager.LoadScene(1);
+    }
+    int[] GetUpgrades()
+    {
+        return upgrades;
     }
 }
