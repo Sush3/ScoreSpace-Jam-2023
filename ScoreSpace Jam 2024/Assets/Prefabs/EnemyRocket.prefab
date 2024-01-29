@@ -49,11 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebbef212d361f14983efd385d87e810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   acceleration: 3
   turnSpeed: 2
   deviationAmplitude: 20
   deviationFrequency: 5
+  startDistThreshold: 0
 --- !u!114 &407281103576202854
 MonoBehaviour:
   m_ObjectHideFlags: 0

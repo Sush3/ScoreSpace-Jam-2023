@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealthScript : MonoBehaviour
 {
     [SerializeField]
-    int maxHealth = 4;
+    int maxHealth;
     int health;
     [SerializeField]
     Transform horizontalLayoutGroup;
@@ -36,7 +36,7 @@ public class PlayerHealthScript : MonoBehaviour
     }
     public void AddHealth(int h)
     {
-        health++;
+        health+=h;
         for (int i = 0; i < h; i++)
         {
             UpdateInterface();
