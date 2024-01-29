@@ -8,6 +8,7 @@ public class TargetScript : Enemy
     GameObject explosionVFX;
     protected override void DieEffect()
     {
+        TutorialScript.Instance.TargetDestroyed();
         Instantiate(explosionVFX, transform.position, transform.rotation);
     }
 }
