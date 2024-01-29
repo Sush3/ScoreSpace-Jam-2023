@@ -13273,7 +13273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initializeScript: {fileID: 1161833068}
-  asteroidCollider: {fileID: 1417316881}
   player: {fileID: 264140240}
 --- !u!4 &2064716195
 Transform:
@@ -24828,7 +24827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &8164078560040243080
 Rigidbody:
   m_ObjectHideFlags: 0
