@@ -27,13 +27,18 @@ public class CannonScript : MonoBehaviour
     float timer=0;
     float reloadTimer = 0;
     int ammo;
+
+    private FMOD.Studio.EventInstance instanceReload;
     void Start()
     {
         ammo = maxAmmo;
+        instanceReload = FMODUnity.RuntimeManager.CreateInstance("event:/Ship/SFX_Turret_Reload");
     }
 
     void Update()
     {
+        instanceReload.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+
         if (Input.GetMouseButton(0) && Time.time >= timer&& ammo>0)
         {
             Transform shootPoint = shootPoints[isLastBarrelUsedRight ? 0 : 1];
@@ -44,9 +49,12 @@ public class CannonScript : MonoBehaviour
             isLastBarrelUsedRight = !isLastBarrelUsedRight;
             ammo--;
             ammoText.text = ammo.ToString();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Ship/SFX_Turret_Fire", transform.position);
+
             if (ammo==0)
             {
                 reloadTimer = Time.time + reloadTime;
+                instanceReload.start();
             }
         }
         if (ammo==0&&Time.time>=reloadTimer)

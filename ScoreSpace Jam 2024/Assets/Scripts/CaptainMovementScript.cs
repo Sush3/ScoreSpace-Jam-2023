@@ -27,10 +27,12 @@ public class CaptainMovementScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             SetThrustersActive(true);
+            audioThruster.SetActive(true);
         }
         else if (Input.GetKeyUp(KeyCode.W))
         {
             SetThrustersActive(false);
+            audioThruster.SetActive(false);
         }
 
         Vector2 mouseDelta = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
@@ -73,7 +75,6 @@ public class CaptainMovementScript : MonoBehaviour
             foreach (var particleSystem in thrusterVfxArray)
             {
                 particleSystem.Play();
-                audioThruster.SetActive(true);
             }
         }
         else
@@ -81,7 +82,6 @@ public class CaptainMovementScript : MonoBehaviour
             foreach (var particleSystem in thrusterVfxArray)
             {
                 particleSystem.Stop();
-                audioThruster.SetActive(false);
             }
         }
     }

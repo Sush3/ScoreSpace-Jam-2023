@@ -28,6 +28,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5679
+--- !u!114 &-8703069230405522754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Turret_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Turret_Reload
+  Guid:
+    Data1: 365669084
+    Data2: 1214571242
+    Data3: -1824375116
+    Data4: 1374030371
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3281
 --- !u!114 &-7787751742005222852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +79,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-2884860284054968966
+--- !u!114 &-6589267981566851077
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,14 +89,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Test
+  m_Name: event:/UI/SFX_Click
   m_EditorClassIdentifier: 
-  Path: event:/Test
+  Path: event:/UI/SFX_Click
   Guid:
-    Data1: -1841384863
-    Data2: 1234595197
-    Data3: 417221032
-    Data4: 1693766185
+    Data1: 1945584244
+    Data2: 1248004925
+    Data3: -1004020304
+    Data4: 1173040169
   Banks:
   - {fileID: 1485424192265276456}
   IsStream: 0
@@ -78,7 +105,109 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 125
+  Length: 221
+--- !u!114 &-5729615332232497304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Boom
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Boom
+  Guid:
+    Data1: 1374032039
+    Data2: 1235903400
+    Data3: 2078032788
+    Data4: -98261236
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 784
+--- !u!114 &-4273412019852211236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Mx_01/MusicToggle
+  m_EditorClassIdentifier: 
+  Name: MusicToggle
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3480309599
+    data2: 2535063729
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-2320418331969044824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicToggle
+  m_EditorClassIdentifier: 
+  Name: MusicToggle
+  StudioPath: parameter:/MusicToggle
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3480309599
+    data2: 2535063729
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1781831185358822010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Shield_Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Shield_Hit
+  Guid:
+    Data1: 1169533941
+    Data2: 1255454590
+    Data3: 2078088339
+    Data4: 1022005780
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1120043105106284606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,18 +248,53 @@ MonoBehaviour:
   - {fileID: 1578912128464644909}
   - {fileID: 1485424192265276456}
   EditorEvents:
-  - {fileID: -2884860284054968966}
   - {fileID: 4770109900155192560}
   - {fileID: -9132235777459034521}
+  - {fileID: 8424743123584149253}
+  - {fileID: 2740454787355567123}
+  - {fileID: 347744605606768991}
+  - {fileID: -6589267981566851077}
+  - {fileID: -5729615332232497304}
+  - {fileID: -8703069230405522754}
+  - {fileID: 2494797809231228330}
+  - {fileID: -1781831185358822010}
   EditorParameters:
   - {fileID: 8089984242305812612}
   - {fileID: -1120043105106284606}
+  - {fileID: -2320418331969044824}
   MasterBanks:
   - {fileID: 1485424192265276456}
   StringsBanks:
   - {fileID: 1578912128464644909}
-  cacheTime: 638420716299664275
+  cacheTime: 638421035795698232
   cacheVersion: 131616
+--- !u!114 &347744605606768991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Rod_Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Rod_Fire
+  Guid:
+    Data1: 1018669900
+    Data2: 1189993550
+    Data3: 223880598
+    Data4: -1468499405
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1485424192265276456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,10 +310,10 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420716299654265
+  lastModified: 638421035795688222
   FileSizes:
   - Name: Desktop
-    Value: 160896
+    Value: 3154368
   Exists: 1
 --- !u!114 &1578912128464644909
 MonoBehaviour:
@@ -166,11 +330,66 @@ MonoBehaviour:
   Path: Assets/FMOD/SSJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420716299664275
+  lastModified: 638421035795698232
   FileSizes:
   - Name: Desktop
-    Value: 984
+    Value: 1312
   Exists: 1
+--- !u!114 &2494797809231228330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Damage
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Damage
+  Guid:
+    Data1: 1516143086
+    Data2: 1324569206
+    Data3: 458647172
+    Data4: -253829369
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 875
+--- !u!114 &2740454787355567123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Mx_01
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Mx_01
+  Guid:
+    Data1: 1057601561
+    Data2: 1205199427
+    Data3: 1456500611
+    Data4: -401998815
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4273412019852211236}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 215000
 --- !u!114 &4770109900155192560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +441,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &8424743123584149253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ship/SFX_Turret_Fire
+  m_EditorClassIdentifier: 
+  Path: event:/Ship/SFX_Turret_Fire
+  Guid:
+    Data1: 1048206359
+    Data2: 1272445996
+    Data3: -679027570
+    Data4: 1876929703
+  Banks:
+  - {fileID: 1485424192265276456}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 50
+  Length: 271
