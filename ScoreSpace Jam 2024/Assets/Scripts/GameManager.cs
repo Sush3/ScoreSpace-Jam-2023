@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Rigidbody player;
     int playerPoints;
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance;
     int[] upgrades = new int[5];
     bool won;
     const string highscoreKey = "Highscore";
@@ -39,12 +39,18 @@ public class GameManager : MonoBehaviour
                 Destroy(Instance.gameObject);
             }
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (SceneManager.GetActiveScene().buildIndex==2)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             Debug.Log(upgrades);
         }
         if (PlayerPrefs.HasKey(highscoreKey))
         {
-            highscoreText.text = "Highscore: "+PlayerPrefs.GetInt(highscoreKey).ToString();
+            if (highscoreText!=null)
+            {
+                highscoreText.text = "Highscore: " + PlayerPrefs.GetInt(highscoreKey).ToString();
+            }
         }
         else
         {
@@ -95,7 +101,7 @@ public class GameManager : MonoBehaviour
         //rel
         Debug.Log("AAAAAAAA");
         upgrades[index]++;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public int GetPoints()
     { return playerPoints; }

@@ -39,7 +39,8 @@ public class PlayerDeathScript : MonoBehaviour
         if (Time.time> endGameTimer)
         {
             Cursor.lockState = CursorLockMode.None;
-            SceneManager.LoadScene(0);
+            GameManager.Instance = null;
+            SceneManager.LoadScene(2);
         }
     }
     public void Die()

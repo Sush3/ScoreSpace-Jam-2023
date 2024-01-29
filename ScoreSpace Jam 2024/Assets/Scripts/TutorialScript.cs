@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialScript : MonoBehaviour
 {
@@ -104,7 +105,7 @@ public class TutorialScript : MonoBehaviour
         // DESTROY ALL TARGETS!
         if (conditionArray[9] && targetCount <=0)
         {
-            Debug.Log("Game scene");
+            SceneManager.LoadScene(2);
             // GAME SCENE
         }
     }

@@ -1360,7 +1360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100247468}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1406607, y: 0.000000019046055, z: -0.000000002705934, w: 0.9900579}
+  m_LocalRotation: {x: 0.14066067, y: -0.000000019046063, z: 0.0000000027059344, w: 0.9900579}
   m_LocalPosition: {x: 0, y: 2.9, z: -110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1622,9 +1622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b3d3f46fc1a046a92722593254537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creditsCurve: 00000000
   upgradesHandler: {fileID: 0}
   scoreText: {fileID: 0}
-  credits: 0
+  highscoreText: {fileID: 0}
   initializeScript: {fileID: 286767130}
   player: {fileID: 2115133144}
 --- !u!4 &192671537
@@ -2269,7 +2270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311332021}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1406607, y: 0.000000019046055, z: -0.000000002705934, w: 0.9900579}
+  m_LocalRotation: {x: 0.14066067, y: -0.000000019046063, z: 0.0000000027059344, w: 0.9900579}
   m_LocalPosition: {x: 0, y: 2.9, z: -110}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
