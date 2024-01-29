@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    InitializeScript initializeScript;
     Collider asteroidCollider;
     [SerializeField]
     Rigidbody player;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+        asteroidCollider = initializeScript.Initialize(10).GetComponent<Collider>();
     }
 
     // Update is called once per frame

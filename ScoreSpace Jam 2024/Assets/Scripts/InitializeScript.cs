@@ -19,15 +19,10 @@ public class InitializeScript : MonoBehaviour
         {
             asteroids[i] = transform.GetChild(i).GetComponent<AsteroidScript>();
         }
-        Initialize(30);
+        Initialize(credits);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void Initialize(int credits)
+    public Transform Initialize(int credits)
     {
         int rnd = Random.Range((int)0,(int)asteroids.Length);
         asteroids[rnd].gameObject.SetActive(true);
@@ -35,5 +30,6 @@ public class InitializeScript : MonoBehaviour
         asteroids[rnd].transform.rotation = Random.rotation;
         float scale=  Random.Range(randomScaleMin, randomScaleMax);
         asteroids[rnd].transform.localScale = Vector3.one * scale;
+        return asteroids[rnd].transform;
     }
 }
